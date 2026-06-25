@@ -1,91 +1,60 @@
-/* Leadership page - Dallas-like structure, Richmond colors */
-.leadership-hero {
-  margin-bottom: 1.25rem;
-}
-
-.officer-section {
-  margin-top: 1.75rem;
-}
-
-.section-title {
-  margin: 0 0 0.9rem;
-  font-size: 1.25rem;
-  color: var(--brand);
+/* Leadership page */
+.section-intro {
+  margin-bottom: 1.5rem;
 }
 
 .officer-grid {
   display: grid;
-  gap: 1rem;
-}
-
-.officer-grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.officer-grid-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 
 .officer-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 0.9rem;
+  border-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
+.officer-photo-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #eef2f7;
+}
+
 .officer-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
-  background: #e2e8f0;
+  display: block;
 }
 
-.officer-body {
-  padding: 0.9rem 1rem 1.1rem;
+.officer-content {
+  padding: 1rem;
 }
 
-.officer-body h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.05rem;
+.officer-content h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.2rem;
 }
 
 .officer-role {
-  margin: 0 0 0.55rem;
-  font-weight: 700;
+  margin: 0 0 0.75rem 0;
   color: var(--brand);
+  font-weight: 700;
 }
 
 .officer-bio {
   margin: 0;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-.officer-card-horizontal {
-  display: grid;
-  grid-template-columns: 170px 1fr;
-}
-
-.officer-card-horizontal .officer-photo {
-  height: 100%;
-  min-height: 170px;
-}
-
-@media (max-width: 1000px) {
-  .officer-grid-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 700px) {
-  .officer-grid-3,
-  .officer-grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .officer-card-horizontal {
+@media (max-width: 900px) {
+  .officer-grid {
     grid-template-columns: 1fr;
   }
 }
