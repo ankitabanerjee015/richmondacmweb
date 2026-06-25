@@ -3,26 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leadership | Richmond ACM Dallas</title>
+  <title>Membership | Richmond ACM Dallas</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Scoped leadership-only styles */
-    .leadership-only .lh-hero{margin-bottom:1.25rem}
-    .leadership-only .lh-kicker{font-weight:700;font-size:.8rem;letter-spacing:.08em;color:var(--brand);margin:0 0 .35rem}
-    .leadership-only .lh-sub{color:var(--muted);margin:0}
-    .leadership-only .lh-section{margin-top:1.5rem}
-    .leadership-only .lh-section h2{margin:0 0 .8rem;color:var(--brand);font-size:1.2rem}
-    .leadership-only .lh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
-    .leadership-only .lh-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .leadership-only .lh-card{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;overflow:hidden}
-    .leadership-only .lh-photo{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#e2e8f0}
-    .leadership-only .lh-body{padding:.9rem 1rem 1rem}
-    .leadership-only .lh-name{margin:0 0 .3rem;font-size:1.05rem}
-    .leadership-only .lh-role{margin:0 0 .55rem;font-weight:700;color:var(--brand)}
-    .leadership-only .lh-bio{margin:0;color:var(--muted);line-height:1.5}
-    @media (max-width:980px){.leadership-only .lh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:700px){.leadership-only .lh-grid,.leadership-only .lh-grid.two{grid-template-columns:1fr}}
-  </style>
+  <link rel="stylesheet" href="membership.css" />
 </head>
 <body>
   <header class="site-header">
@@ -31,8 +14,8 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a class="active" href="leadership.html">Leadership</a>
-        <a href="membership.html">Membership</a>
+        <a href="leadership.html">Leadership</a>
+        <a class="active" href="membership.html">Membership</a>
         <a href="events.html">Events</a>
         <a href="programs.html">Programs</a>
         <a href="sponsors.html">Sponsors</a>
@@ -43,43 +26,79 @@
     </div>
   </header>
 
-  <main class="container page leadership-only">
-    <section class="lh-hero">
-      <p class="lh-kicker">CHAPTER LEADERSHIP</p>
-      <h1>Officers</h1>
-      <p class="lh-sub">Update photos, names, roles, and bios later.</p>
+  <main class="container page membership-page">
+    <section class="membership-hero">
+      <p class="kicker">GET INVOLVED</p>
+      <h1>Join Richmond ACM Dallas</h1>
+      <p>Choose how you’d like to engage with our chapter.</p>
     </section>
 
-    <section class="lh-section">
-      <h2>Executive Committee</h2>
-      <div class="lh-grid">
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=President" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">President</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Vice+President" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Vice President</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Secretary" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Secretary</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-      </div>
+    <section class="membership-options">
+      <article class="option-card">
+        <h2>Become a Member</h2>
+        <p>Join our chapter community and participate in programs, events, and networking.</p>
+        <button id="openMemberFormBtn" class="btn primary" type="button">Become a Member</button>
+      </article>
+
+      <article class="option-card">
+        <h2>Apply to Speak</h2>
+        <p>Share your expertise through chapter talks, workshops, and technical sessions.</p>
+        <button id="openSpeakFormBtn" class="btn ghost" type="button">Apply to Speak</button>
+      </article>
     </section>
 
-    <section class="lh-section">
-      <h2>Directors & Chairs</h2>
-      <div class="lh-grid">
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Programs+Chair" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Programs Chair</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Membership+Chair" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Membership Chair</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Outreach+Lead" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Outreach Lead</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-      </div>
+    <!-- MEMBER FORM -->
+    <section id="memberFormSection" class="form-section hidden">
+      <h2>Membership Application</h2>
+      <p>Fill out this form to become a member.</p>
+
+      <form id="memberForm" class="common-form">
+        <div class="form-row"><label for="m_fullName">Full Name *</label><input id="m_fullName" name="fullName" required /></div>
+        <div class="form-row"><label for="m_email">Email *</label><input id="m_email" name="email" type="email" required /></div>
+        <div class="form-row"><label for="m_phone">Phone</label><input id="m_phone" name="phone" type="tel" /></div>
+        <div class="form-row"><label for="m_company">Company / Organization</label><input id="m_company" name="company" /></div>
+        <div class="form-row"><label for="m_role">Current Role / Title</label><input id="m_role" name="role" /></div>
+        <div class="form-row"><label for="m_interest">Areas of Interest *</label><textarea id="m_interest" name="interest" rows="4" required></textarea></div>
+        <button id="submitMemberBtn" class="btn primary" type="submit">Submit Membership Application</button>
+        <p id="memberFormStatus" class="form-status" aria-live="polite"></p>
+      </form>
     </section>
 
-    <section class="lh-section">
-      <h2>Faculty Advisors</h2>
-      <div class="lh-grid two">
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Advisor+1" alt=""><div class="lh-body"><h3 class="lh-name">Advisor Name</h3><p class="lh-role">Faculty Advisor</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Advisor+2" alt=""><div class="lh-body"><h3 class="lh-name">Advisor Name</h3><p class="lh-role">Faculty Co-Advisor</p><p class="lh-bio">Short bio placeholder.</p></div></article>
-      </div>
+    <!-- SPEAKER FORM -->
+    <section id="speakFormSection" class="form-section hidden">
+      <h2>Speaker Application</h2>
+      <p>Please complete the form below. We’ll review and contact you shortly.</p>
+
+      <form id="speakForm" class="common-form">
+        <div class="form-row"><label for="s_fullName">Full Name *</label><input id="s_fullName" name="fullName" required /></div>
+        <div class="form-row"><label for="s_email">Email *</label><input id="s_email" name="email" type="email" required /></div>
+        <div class="form-row"><label for="s_organization">Organization / Company</label><input id="s_organization" name="organization" /></div>
+        <div class="form-row"><label for="s_title">Proposed Talk Title *</label><input id="s_title" name="title" required /></div>
+        <div class="form-row"><label for="s_topic">Topic Area *</label><input id="s_topic" name="topic" required /></div>
+        <div class="form-row"><label for="s_abstract">Talk Abstract *</label><textarea id="s_abstract" name="abstract" rows="5" required></textarea></div>
+        <div class="form-row">
+          <label for="s_duration">Preferred Duration</label>
+          <select id="s_duration" name="duration">
+            <option value="">Select one</option>
+            <option>15 minutes</option>
+            <option>30 minutes</option>
+            <option>45 minutes</option>
+            <option>60 minutes</option>
+          </select>
+        </div>
+        <div class="form-row"><label for="s_bio">Short Bio *</label><textarea id="s_bio" name="bio" rows="4" required></textarea></div>
+        <div class="form-row"><label for="s_links">LinkedIn / Website / Speaker Profile</label><input id="s_links" name="links" type="url" /></div>
+        <button id="submitSpeakBtn" class="btn primary" type="submit">Submit Speaker Application</button>
+        <p id="speakFormStatus" class="form-status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">© <span id="year"></span> Richmond ACM Dallas</div>
   </footer>
+
   <script src="script.js"></script>
+  <script src="membership.js"></script>
 </body>
 </html>
