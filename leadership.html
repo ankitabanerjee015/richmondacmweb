@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leadership | Richmond ACM Dallas</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Scoped leadership-only styles */
+    .leadership-only .lh-hero{margin-bottom:1.25rem}
+    .leadership-only .lh-kicker{font-weight:700;font-size:.8rem;letter-spacing:.08em;color:var(--brand);margin:0 0 .35rem}
+    .leadership-only .lh-sub{color:var(--muted);margin:0}
+    .leadership-only .lh-section{margin-top:1.5rem}
+    .leadership-only .lh-section h2{margin:0 0 .8rem;color:var(--brand);font-size:1.2rem}
+    .leadership-only .lh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .leadership-only .lh-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .leadership-only .lh-card{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;overflow:hidden}
+    .leadership-only .lh-photo{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#e2e8f0}
+    .leadership-only .lh-body{padding:.9rem 1rem 1rem}
+    .leadership-only .lh-name{margin:0 0 .3rem;font-size:1.05rem}
+    .leadership-only .lh-role{margin:0 0 .55rem;font-weight:700;color:var(--brand)}
+    .leadership-only .lh-bio{margin:0;color:var(--muted);line-height:1.5}
+    @media (max-width:980px){.leadership-only .lh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:700px){.leadership-only .lh-grid,.leadership-only .lh-grid.two{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -25,136 +43,36 @@
     </div>
   </header>
 
-  <main class="container page">
-    <section class="leadership-hero">
-      <p class="kicker">CHAPTER LEADERSHIP</p>
+  <main class="container page leadership-only">
+    <section class="lh-hero">
+      <p class="lh-kicker">CHAPTER LEADERSHIP</p>
       <h1>Officers</h1>
-      <p>
-        Meet the team behind Richmond ACM Dallas.  
-        Update names, roles, photos, and bios as your board is finalized.
-      </p>
+      <p class="lh-sub">Update photos, names, roles, and bios later.</p>
     </section>
 
-    <section class="officer-section">
-      <h2 class="section-title">Executive Committee</h2>
-      <div class="officer-grid officer-grid-3">
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=President" alt="President photo placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">President</p>
-            <p class="officer-bio">Leads chapter strategy, partnerships, and overall direction.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Vice+President" alt="Vice President photo placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Vice President</p>
-            <p class="officer-bio">Supports operations and coordinates cross-team execution.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Secretary" alt="Secretary photo placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Secretary</p>
-            <p class="officer-bio">Manages communication, records, and chapter documentation.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Treasurer" alt="Treasurer photo placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Treasurer</p>
-            <p class="officer-bio">Oversees budgeting, finance tracking, and sponsor funds.</p>
-          </div>
-        </article>
+    <section class="lh-section">
+      <h2>Executive Committee</h2>
+      <div class="lh-grid">
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=President" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">President</p><p class="lh-bio">Short bio placeholder.</p></div></article>
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Vice+President" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Vice President</p><p class="lh-bio">Short bio placeholder.</p></div></article>
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Secretary" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Secretary</p><p class="lh-bio">Short bio placeholder.</p></div></article>
       </div>
     </section>
 
-    <section class="officer-section">
-      <h2 class="section-title">Directors & Chairs</h2>
-      <div class="officer-grid officer-grid-3">
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Programs+Chair" alt="Programs Chair placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Programs Chair</p>
-            <p class="officer-bio">Plans workshops, tech talks, and annual chapter programs.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Membership+Chair" alt="Membership Chair placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Membership Chair</p>
-            <p class="officer-bio">Leads outreach, onboarding, and member retention efforts.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Outreach+Lead" alt="Outreach Lead placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Outreach Lead</p>
-            <p class="officer-bio">Builds community collaborations and external partnerships.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Marketing+Lead" alt="Marketing Lead placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Marketing Lead</p>
-            <p class="officer-bio">Manages chapter branding, social media, and promotions.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Industry+Relations" alt="Industry Relations placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Industry Relations</p>
-            <p class="officer-bio">Coordinates industry speakers, mentors, and sponsor contacts.</p>
-          </div>
-        </article>
-
-        <article class="officer-card">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Events+Coordinator" alt="Events Coordinator placeholder" />
-          <div class="officer-body">
-            <h3>Officer Name</h3>
-            <p class="officer-role">Events Coordinator</p>
-            <p class="officer-bio">Owns event logistics, venue setup, and event-day execution.</p>
-          </div>
-        </article>
+    <section class="lh-section">
+      <h2>Directors & Chairs</h2>
+      <div class="lh-grid">
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Programs+Chair" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Programs Chair</p><p class="lh-bio">Short bio placeholder.</p></div></article>
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Membership+Chair" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Membership Chair</p><p class="lh-bio">Short bio placeholder.</p></div></article>
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Outreach+Lead" alt=""><div class="lh-body"><h3 class="lh-name">Officer Name</h3><p class="lh-role">Outreach Lead</p><p class="lh-bio">Short bio placeholder.</p></div></article>
       </div>
     </section>
 
-    <section class="officer-section">
-      <h2 class="section-title">Faculty Advisors</h2>
-      <div class="officer-grid officer-grid-2">
-        <article class="officer-card officer-card-horizontal">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Advisor+1" alt="Advisor 1 placeholder" />
-          <div class="officer-body">
-            <h3>Advisor Name</h3>
-            <p class="officer-role">Faculty Advisor</p>
-            <p class="officer-bio">Provides academic guidance and strategic direction for chapter initiatives.</p>
-          </div>
-        </article>
-
-        <article class="officer-card officer-card-horizontal">
-          <img class="officer-photo" src="https://via.placeholder.com/500x500?text=Advisor+2" alt="Advisor 2 placeholder" />
-          <div class="officer-body">
-            <h3>Advisor Name</h3>
-            <p class="officer-role">Faculty Co-Advisor</p>
-            <p class="officer-bio">Supports chapter planning and student leadership development.</p>
-          </div>
-        </article>
+    <section class="lh-section">
+      <h2>Faculty Advisors</h2>
+      <div class="lh-grid two">
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Advisor+1" alt=""><div class="lh-body"><h3 class="lh-name">Advisor Name</h3><p class="lh-role">Faculty Advisor</p><p class="lh-bio">Short bio placeholder.</p></div></article>
+        <article class="lh-card"><img class="lh-photo" src="https://via.placeholder.com/500?text=Advisor+2" alt=""><div class="lh-body"><h3 class="lh-name">Advisor Name</h3><p class="lh-role">Faculty Co-Advisor</p><p class="lh-bio">Short bio placeholder.</p></div></article>
       </div>
     </section>
   </main>
@@ -162,7 +80,6 @@
   <footer class="site-footer">
     <div class="container">© <span id="year"></span> Richmond ACM Dallas</div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
