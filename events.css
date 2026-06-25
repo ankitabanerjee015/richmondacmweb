@@ -1,0 +1,49 @@
+.events-listing h2 {
+  margin-bottom: 1rem;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand);
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.event-date {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.event-content h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  line-height: 1.25;
+}
+
+.event-content p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.event-content p strong {
+  color: var(--brand);
+}
+
+.event-content a {
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .event-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+}
