@@ -1,52 +1,98 @@
-<section class="events-listing">
-  <h2>Upcoming Events</h2>
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="events.css" />
-  <article class="event-row">
-    <div class="event-date">
-      <div>June</div>
-      <div>27</div>
-      <div>2:00 PM EST</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Richmond ACM Chapter</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="events.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Richmond ACM Chapter</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="membership.html">Membership</a>
+        <a class="active" href="events.html">Events</a>
+        <a href="programs.html">Programs</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <div class="event-content">
-      <h3>Trustworthy AI in Production: Building Reliable, Secure, and Observable AI Systems</h3>
-      <p><strong>Speaker:</strong> Ravi Teja Reddy Mandala (Lead Site Reliability Engineer at Oracle)</p>
-      <p><strong>Location:</strong> Virtual Session</p>
-      <p><strong>Intended Audience:</strong> Software Engineers &amp; Architects</p>
-      <p>An engineering talk focusing on strategies and frameworks for building reliable, secure, and observable AI systems in production.</p>
-      <p><a href="#">Join Us</a></p>
-    </div>
-  </article>
+  </header>
 
-  <article class="event-row">
-    <div class="event-date">
-      <div>July</div>
-      <div>12</div>
-      <div>6:30 PM EST</div>
-    </div>
-    <div class="event-content">
-      <h3>Modern Cloud Architecture Patterns for Scalable Applications</h3>
-      <p><strong>Speaker:</strong> Speaker Name (Cloud Architect)</p>
-      <p><strong>Location:</strong> Richmond Innovation Hub</p>
-      <p><strong>Intended Audience:</strong> Developers, DevOps Engineers</p>
-      <p>Explore practical cloud-native architecture patterns, deployment strategies, and reliability best practices.</p>
-      <p><a href="#">Join Us</a></p>
-    </div>
-  </article>
+  <main class="container page">
+    <section class="events-listing">
+      <h2>Upcoming Events</h2>
 
-  <article class="event-row">
-    <div class="event-date">
-      <div>August</div>
-      <div>08</div>
-      <div>5:00 PM EST</div>
-    </div>
-    <div class="event-content">
-      <h3>Cybersecurity Essentials for Engineering Teams</h3>
-      <p><strong>Speaker:</strong> Speaker Name (Security Engineer)</p>
-      <p><strong>Location:</strong> Virtual Session</p>
-      <p><strong>Intended Audience:</strong> Engineers, Team Leads, Students</p>
-      <p>A practical session on threat modeling, secure coding practices, and incident-response fundamentals.</p>
-      <p><a href="#">Join Us</a></p>
-    </div>
-  </article>
-</section>
+      <article class="event-row">
+        <div class="event-date">
+          <div>June</div>
+          <div>27</div>
+          <div>2:00 PM EST</div>
+        </div>
+        <div class="event-content">
+          <h3>Trustworthy AI in Production: Building Reliable, Secure, and Observable AI Systems</h3>
+          <p><strong>Speaker:</strong> Ravi Teja Reddy Mandala (Lead Site Reliability Engineer at Oracle)</p>
+          <p><strong>Location:</strong> Virtual Session</p>
+          <p><strong>Intended Audience:</strong> Software Engineers &amp; Architects</p>
+          <p>
+            An engineering talk focusing on strategies and frameworks for building reliable, secure,
+            and observable AI systems in production environments.
+          </p>
+          <p><a href="#">Join Us</a></p>
+        </div>
+      </article>
+
+      <article class="event-row">
+        <div class="event-date">
+          <div>July</div>
+          <div>12</div>
+          <div>6:30 PM EST</div>
+        </div>
+        <div class="event-content">
+          <h3>Modern Cloud Architecture Patterns for Scalable Applications</h3>
+          <p><strong>Speaker:</strong> Speaker Name (Cloud Architect)</p>
+          <p><strong>Location:</strong> Richmond Innovation Hub</p>
+          <p><strong>Intended Audience:</strong> Developers, DevOps Engineers</p>
+          <p>
+            Explore practical cloud-native architecture patterns, deployment strategies,
+            and reliability best practices.
+          </p>
+          <p><a href="#">Join Us</a></p>
+        </div>
+      </article>
+
+      <article class="event-row">
+        <div class="event-date">
+          <div>August</div>
+          <div>08</div>
+          <div>5:00 PM EST</div>
+        </div>
+        <div class="event-content">
+          <h3>Cybersecurity Essentials for Engineering Teams</h3>
+          <p><strong>Speaker:</strong> Speaker Name (Security Engineer)</p>
+          <p><strong>Location:</strong> Virtual Session</p>
+          <p><strong>Intended Audience:</strong> Engineers, Team Leads, Students</p>
+          <p>
+            A practical session on threat modeling, secure coding practices,
+            and incident-response fundamentals.
+          </p>
+          <p><a href="#">Join Us</a></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Richmond ACM Chapter</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
