@@ -36,49 +36,57 @@
     <section class="membership-options">
       <article class="option-card">
         <h2>Become a Member</h2>
-        <p>Join our chapter community and participate in programs, events, and networking.</p>
-        <button id="openMemberFormBtn" class="btn primary" type="button">Become a Member</button>
+        <p>Join our chapter to access events, networking, technical programs, and community initiatives.</p>
+        <a class="btn primary" href="https://forms.gle/REPLACE_WITH_YOUR_MEMBERSHIP_FORM" target="_blank" rel="noopener">
+          Become a Member
+        </a>
       </article>
 
       <article class="option-card">
         <h2>Apply to Speak</h2>
-        <p>Share your expertise through chapter talks, workshops, and technical sessions.</p>
+        <p>Share your expertise with our community through talks, workshops, or panel sessions.</p>
         <button id="openSpeakFormBtn" class="btn ghost" type="button">Apply to Speak</button>
       </article>
     </section>
 
-    <!-- MEMBER FORM -->
-    <section id="memberFormSection" class="form-section hidden">
-      <h2>Membership Application</h2>
-      <p>Fill out this form to become a member.</p>
-
-      <form id="memberForm" class="common-form">
-        <div class="form-row"><label for="m_fullName">Full Name *</label><input id="m_fullName" name="fullName" required /></div>
-        <div class="form-row"><label for="m_email">Email *</label><input id="m_email" name="email" type="email" required /></div>
-        <div class="form-row"><label for="m_phone">Phone</label><input id="m_phone" name="phone" type="tel" /></div>
-        <div class="form-row"><label for="m_company">Company / Organization</label><input id="m_company" name="company" /></div>
-        <div class="form-row"><label for="m_role">Current Role / Title</label><input id="m_role" name="role" /></div>
-        <div class="form-row"><label for="m_interest">Areas of Interest *</label><textarea id="m_interest" name="interest" rows="4" required></textarea></div>
-        <button id="submitMemberBtn" class="btn primary" type="submit">Submit Membership Application</button>
-        <p id="memberFormStatus" class="form-status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <!-- SPEAKER FORM -->
-    <section id="speakFormSection" class="form-section hidden">
+    <section id="speakFormSection" class="speak-form-section hidden">
       <h2>Speaker Application</h2>
       <p>Please complete the form below. We’ll review and contact you shortly.</p>
 
-      <form id="speakForm" class="common-form">
-        <div class="form-row"><label for="s_fullName">Full Name *</label><input id="s_fullName" name="fullName" required /></div>
-        <div class="form-row"><label for="s_email">Email *</label><input id="s_email" name="email" type="email" required /></div>
-        <div class="form-row"><label for="s_organization">Organization / Company</label><input id="s_organization" name="organization" /></div>
-        <div class="form-row"><label for="s_title">Proposed Talk Title *</label><input id="s_title" name="title" required /></div>
-        <div class="form-row"><label for="s_topic">Topic Area *</label><input id="s_topic" name="topic" required /></div>
-        <div class="form-row"><label for="s_abstract">Talk Abstract *</label><textarea id="s_abstract" name="abstract" rows="5" required></textarea></div>
+      <form id="speakForm" class="speak-form">
         <div class="form-row">
-          <label for="s_duration">Preferred Duration</label>
-          <select id="s_duration" name="duration">
+          <label for="fullName">Full Name *</label>
+          <input id="fullName" name="fullName" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="organization">Organization / Company</label>
+          <input id="organization" name="organization" type="text" />
+        </div>
+
+        <div class="form-row">
+          <label for="title">Proposed Talk Title *</label>
+          <input id="title" name="title" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="topic">Topic Area *</label>
+          <input id="topic" name="topic" type="text" required placeholder="AI, Cloud, Security, Web Dev..." />
+        </div>
+
+        <div class="form-row">
+          <label for="abstract">Talk Abstract *</label>
+          <textarea id="abstract" name="abstract" rows="5" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="duration">Preferred Duration</label>
+          <select id="duration" name="duration">
             <option value="">Select one</option>
             <option>15 minutes</option>
             <option>30 minutes</option>
@@ -86,10 +94,19 @@
             <option>60 minutes</option>
           </select>
         </div>
-        <div class="form-row"><label for="s_bio">Short Bio *</label><textarea id="s_bio" name="bio" rows="4" required></textarea></div>
-        <div class="form-row"><label for="s_links">LinkedIn / Website / Speaker Profile</label><input id="s_links" name="links" type="url" /></div>
-        <button id="submitSpeakBtn" class="btn primary" type="submit">Submit Speaker Application</button>
-        <p id="speakFormStatus" class="form-status" aria-live="polite"></p>
+
+        <div class="form-row">
+          <label for="bio">Short Bio *</label>
+          <textarea id="bio" name="bio" rows="4" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="links">LinkedIn / Website / Speaker Profile</label>
+          <input id="links" name="links" type="url" />
+        </div>
+
+        <button id="submitSpeakBtn" class="btn primary" type="submit">Submit Application</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
       </form>
     </section>
   </main>
