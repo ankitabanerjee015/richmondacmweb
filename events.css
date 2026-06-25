@@ -1,6 +1,4 @@
-.events-listing h2 {
-  margin-bottom: 1rem;
-}
+.events-listing h2 { margin-bottom: 1rem; }
 
 .event-row {
   display: grid;
@@ -11,6 +9,7 @@
   border-left: 4px solid var(--brand);
   border-radius: 14px;
   padding: 2rem;
+  margin-bottom: 1rem;
 }
 
 .event-date {
@@ -21,24 +20,19 @@
 
 .event-content h3 {
   margin: 0 0 1rem;
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
   line-height: 1.25;
 }
 
 .event-content p {
-  margin: 0 0 1rem;
+  margin: 0 0 .9rem;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.55;
 }
 
-.event-content p strong {
-  color: var(--brand);
-}
-
-.event-content a {
-  font-weight: 600;
-}
+.event-content p strong { color: var(--brand); }
+.event-content a { font-weight: 600; }
 
 @media (max-width: 900px) {
   .event-row {
