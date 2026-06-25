@@ -1,4 +1,121 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Membership | Richmond ACM Dallas</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">Richmond ACM Dallas</a><nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="leadership.html">Leadership</a><a class="active" href="membership.html">Membership</a><a href="events.html">Events</a><a href="programs.html">Programs</a><a href="sponsors.html">Sponsors</a><a href="gallery.html">Gallery</a><a href="news.html">News</a><a href="contact.html">Contact</a></nav></div></header>
-<main class="container page"><h1>Membership</h1><p>Replace with benefits, dues, and signup process.</p></main>
-<footer class="site-footer"><div class="container">© <span id="year"></span> Richmond ACM Dallas</div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership | Richmond ACM Dallas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="membership.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Richmond ACM Dallas</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="leadership.html">Leadership</a>
+        <a class="active" href="membership.html">Membership</a>
+        <a href="events.html">Events</a>
+        <a href="programs.html">Programs</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page membership-page">
+    <section class="membership-hero">
+      <p class="kicker">GET INVOLVED</p>
+      <h1>Join Richmond ACM Dallas</h1>
+      <p>Choose how you’d like to engage with our chapter.</p>
+    </section>
+
+    <section class="membership-options">
+      <article class="option-card">
+        <h2>Become a Member</h2>
+        <p>Join our chapter to access events, networking, technical programs, and community initiatives.</p>
+        <a class="btn primary" href="https://forms.gle/REPLACE_WITH_YOUR_MEMBERSHIP_FORM" target="_blank" rel="noopener">
+          Become a Member
+        </a>
+      </article>
+
+      <article class="option-card">
+        <h2>Apply to Speak</h2>
+        <p>Share your expertise with our community through talks, workshops, or panel sessions.</p>
+        <button id="openSpeakFormBtn" class="btn ghost" type="button">Apply to Speak</button>
+      </article>
+    </section>
+
+    <section id="speakFormSection" class="speak-form-section hidden">
+      <h2>Speaker Application</h2>
+      <p>Please complete the form below. We’ll review and contact you shortly.</p>
+
+      <form id="speakForm" class="speak-form">
+        <div class="form-row">
+          <label for="fullName">Full Name *</label>
+          <input id="fullName" name="fullName" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="organization">Organization / Company</label>
+          <input id="organization" name="organization" type="text" />
+        </div>
+
+        <div class="form-row">
+          <label for="title">Proposed Talk Title *</label>
+          <input id="title" name="title" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="topic">Topic Area *</label>
+          <input id="topic" name="topic" type="text" required placeholder="AI, Cloud, Security, Web Dev..." />
+        </div>
+
+        <div class="form-row">
+          <label for="abstract">Talk Abstract *</label>
+          <textarea id="abstract" name="abstract" rows="5" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="duration">Preferred Duration</label>
+          <select id="duration" name="duration">
+            <option value="">Select one</option>
+            <option>15 minutes</option>
+            <option>30 minutes</option>
+            <option>45 minutes</option>
+            <option>60 minutes</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="bio">Short Bio *</label>
+          <textarea id="bio" name="bio" rows="4" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="links">LinkedIn / Website / Speaker Profile</label>
+          <input id="links" name="links" type="url" />
+        </div>
+
+        <button id="submitSpeakBtn" class="btn primary" type="submit">Submit Application</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Richmond ACM Dallas</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="membership.js"></script>
+</body>
+</html>
